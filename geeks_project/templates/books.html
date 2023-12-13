@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books</title>
+</head>
+<body>
+    <section class="books-list">
+        {% for i in books %}
+        <div class="book-{{i.id}}">
+            <h2>
+                Название: {{i.book_name}}
+            </h2>
+            <p>
+                Описание: {{i.book_description}}
+            </p>
+            <img src="{{i.book_image}}" alt="book-img">
+            <h5>
+                Цена: {{i.book_price}}
+            </h5>
+            <h4>
+                Автор: {{i.book_author}}
+            </h4>
+        </div>
+        {% endfor %}
+    </section>
+</body>
+</html>
