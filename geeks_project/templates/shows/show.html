@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Видео: {{ show.title }}</title>
+</head>
+<body>
+    <h1>Название: {{ show.title }}</h1>
+    <h5>Описание: {{ show.description }}</h5>
+    <img src="{{ show.image }}" alt="Превью">
+    <p>Цена: {{ show.price }}</p>
+    <p>Жанр: {{ show.genre }}</p>
+    <p>Автор: {{ show.author }}</p>
+    <a href="{{ show.trailer }}">Ссылка на видео</a>
+</body>
+</html>
