@@ -1,22 +1,23 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TV SHOWS</title>
-</head>
-<body>
+{% load static %}
+{% include 'shows/header.html' %}
     <h1>Видеоролики</h1>
     <ul>
-        {% for i in shows %}
-        <li>
-            <h5>{{ i.title }}</h5>
-            <h5>{{ i.description }}</h5>
-            <a href="/show_list/{{ i.id }}/">Нажмите чтобы узнать подробности...</a>
-        </li>
-        {% endfor %}
+        <div class="container">
+            <h1>Список роликов</h1>
+            <div class="row">
+                {% for i in shows %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ i.photo.url }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ i.title }}</h5>
+                            <p class="card-text">{{ i.description }}</p>
+                            <a href="/show_list/{{ i.id }}/" class="btn btn-primary">Детальная информация</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </ul>
-</body>
-</html>
+{% include 'shows/footer.html' %}
