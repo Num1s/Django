@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Выберите объект для изменения</h1>
+    <ul>
+        {% for i in shows_update %}
+        <li>
+            <h2>{{ i.title }}</h2>
+            <button><a href="/edit_show/{{ i.id }}/edit">Изменить</a></button>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
