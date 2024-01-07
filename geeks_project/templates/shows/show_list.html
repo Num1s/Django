@@ -4,7 +4,7 @@
         <div class="container">
             <h1>Список роликов</h1>
             <div class="row">
-                {% for i in shows %}
+                {% for i in object_list %}
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="{{ i.photo.url }}" class="card-img-top" alt="...">
