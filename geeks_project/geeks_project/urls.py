@@ -8,7 +8,8 @@ urlpatterns = [
     path('', include('books.urls')),
     path('', include('tv_shows.urls')),
     path('', include('parser_app.urls')),
-    path('', include('custom_users.urls'))
+    path('', include('custom_users.urls')),
+    path('', include('cloth.urls'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
